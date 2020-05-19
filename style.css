@@ -37,6 +37,14 @@ h2 {
   padding-top: 50px;
 }
 
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 0.8em;
+}
+
 .has-line-top::before {
   content: "";
   background-color: #fff;
@@ -48,6 +56,13 @@ h2 {
 }
 
 .line-violet::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 150px;
   background-color: var(--dark-violet);
 }
 
@@ -137,7 +152,38 @@ header::before {
 .bigPicture {
   margin-bottom: -250px;
 }
-section {
+
+/* Section syling */
+
+.bg-violet {
+  background-color: var(--dark-violet);
+  padding: 70px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.bg-violet::before {
+  content: "";
+  background-image: url("./images/bg-pattern-how-we-work-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  background-size: 50% 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-violet h2 {
+  padding: 0;
+  color: white;
+  font-size: 3em;
+  width: 60%;
+}
+
+.tile {
+  margin-top: 90px;
 }
 
 footer {
