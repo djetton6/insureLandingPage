@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --greyish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* width calculated inside the border width */
+
+body {
+  color: var(--dark-violet);
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", sans-serif;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+h1,
+h2 {
+  font-size: 4em;
+  letter-spacing: 2px;
+  position: relative;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.has-line-top::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 150px;
+}
+
+.line-violet::before {
+  background-color: var(--dark-violet);
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-reverse {
+  border-color: var(--dark-violet);
+  color: var(--dark-violet);
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+/* all direct children should be flex 1 depending on the number of elements will take up the same amout of width */
+.flex > div {
+  flex: 1;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 30px;
+}
+
+nav li a {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--dark-violet);
+  color: #fff;
+  padding: 50px;
+  margin-bottom: 250px;
+}
+
+header::after {
+  content: "";
+  background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+  background-position: top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+header::before {
+  content: "";
+  background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bigPicture {
+  margin-bottom: -250px;
+}
+section {
+}
+
+footer {
+}
