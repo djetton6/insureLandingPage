@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- https://youtu.be/9HVKR_hK0nY?t=7243 -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +13,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="">
+    <script src="script.js" defer></script>
 
     <title>Sample Landing Page - Insurance</title>
 
@@ -31,12 +32,17 @@
     <nav>
       <div class="container">
         <div class="flex">
-          <div>
+          <div class="img-wrapper">
           <img src="./images/logo.svg" alt="logo" />
         </div>
 
-        <div>
-          <ul>
+        <button class="hamburger" id="hamburger">
+          <img class="open" src="./images/icon-hamburger.svg" alt="icon-hamburger">
+          <img class="close" src="./images/icon-close.svg" alt="icon-close">
+
+        </button>
+
+          <ul id="menu">
             <li><a href="#">How we work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Account</a></li>
@@ -44,12 +50,11 @@
           </ul>
         </div>
       </div>
-    </div>
   </nav>
 
     <header>
       <div class="container">
-          <div class="flex align-start">
+          <div class="flex align-start reverse-mobile">
           <div>
             <h1 class="has-line-top">Humanizing your insurance.</h1>
             <p>

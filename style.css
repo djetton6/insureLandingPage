@@ -42,7 +42,8 @@ h3 {
 }
 
 p {
-  font-size: 0.8em;
+  line-height: 1.7em;
+  opacity: 0.8;
 }
 
 .has-line-top::before {
@@ -92,7 +93,7 @@ p {
 }
 
 .container {
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
   max-width: 100%;
   width: 1200px;
@@ -113,8 +114,23 @@ p {
   flex: 1;
 }
 
+/* Navigation Styling */
+nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+nav .hamburger {
+  display: none;
+}
+
 nav ul {
   display: flex;
+  align-items: center;
   list-style-type: none;
   padding: 0;
 }
@@ -133,6 +149,7 @@ header {
   background-color: var(--dark-violet);
   color: #fff;
   padding: 50px;
+  margin-top: 80px;
   margin-bottom: 250px;
 }
 
@@ -167,6 +184,7 @@ header::before {
 }
 
 .bigPicture {
+  max-width: 100%;
   margin-bottom: -250px;
 }
 
@@ -201,7 +219,7 @@ footer {
   background-image: url(./images/bg-pattern-footer-desktop.svg);
   background-position: top left;
   background-repeat: no-repeat;
-  padding: 30px 0;
+  padding: 60px 0 30px;
 }
 
 footer h4 {
@@ -233,10 +251,111 @@ footer li a {
   margin-bottom: 30px;
 }
 
-/* Responsive Design Elements- */
+/* Responsive Design Elements- Mobile Design */
 @media screen and (max-width: 768px) {
   body {
     text-align: center;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 20px 0;
+  }
+
+  /* Navigation Hamburger for Opening and Closing */
+  nav .hamburger {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+  }
+
+  nav .hamburger:focus {
+    outline: none;
+  }
+
+  nav .hamburger .close {
+    display: none;
+  }
+
+  nav .hamburger.show .open {
+    display: none;
+  }
+
+  nav .hamburger.show .close {
+    display: block;
+  }
+  nav .flex {
+    flex-direction: row;
+  }
+
+  nav .img-wrapper {
+    text-align: left;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.show {
+    background-color: var(--very-dark-violet);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-top: 30px;
+    margin: 0;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    z-index: 100;
+  }
+
+  nav ul li {
+    margin: 30px 0;
+  }
+
+  header {
+    padding-top: 0;
+    margin-top: 50px;
+  }
+
+  .btn-reverse {
+    border-color: white;
+    color: white;
+  }
+
+  header::before,
+  header::after {
+    display: none;
+  }
+
+  .bigPicture {
+    display: inline-block;
+    margin-left: -20px;
+    margin-bottom: -10px;
+    max-width: calc(100% + 40px);
+  }
+
+  .line-top::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .reverse-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .bg-violet {
+    background-image: url("./images/bg-pattern-how-we-work-mobile.svg");
+  }
+
+  .bg-violet h2 {
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   footer {
@@ -249,7 +368,7 @@ footer li a {
     flex-direction: row;
   }
 
-  .flex {
-    flex-direction: column;
+  footer .flex div {
+    width: 100%;
   }
 }
